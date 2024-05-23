@@ -1,0 +1,46 @@
+@startuml CanonicalSignature
+
+skinparam classAttributeIconSize 1
+skinparam namespaceSeparator .
+
+namespace Davivienda.Framework.Services.CanonicalSignature {
+  class ErrorDetail << (C,orchid) >>
+  {
+    + Message: string?
+    + Code: string?
+  }
+}
+
+namespace Davivienda.Framework.Services.CanonicalSignature {
+  class ServiceRequest<T> << (C,orchid) >>
+  {
+    + Body: T?
+  }
+}
+
+
+namespace Davivienda.Framework.Services.CanonicalSignature {
+  class ServiceResponse<T> << (C,orchid) >>
+  {
+    + ServiceResponse()
+    + Data: T?
+    + Succeeded: bool
+    + TransactionId: Guid?
+    + SessionId: Guid?
+    + Errors: List<ErrorDetail>?
+  }
+}
+
+namespace Davivienda.Framework.Services.CanonicalSignature {
+  class StandardHeader<T> << (C,orchid) >>
+  {
+    + TransactionId: Guid
+    + SessionId: Guid
+    + ChannelId: int
+    + I18n: string
+  }
+}
+
+Davivienda.Framework.Services.CanonicalSignature.ServiceResponse --> Davivienda.Framework.Services.CanonicalSignature.ErrorDetail
+
+@enduml

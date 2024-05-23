@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>$(AssemblyName)</Title>
+    <Authors>José pablo Cárdenas Villalobos</Authors>
+    <Copyright>Todos los derechos reservados a Banco Davivienda Costa Rica S.A @2023</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>utility; tools; .NET; davivienda; framework; services; signature; caninical</PackageTags>
+    <PackageLicenseFile>LicenseAgreement.md</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Description>
+			CanonicalSignature, es una librería que simplifica la complejidad de implementar una firma canónica al encapsular los campos de Request, Response y Headers de Servicio tipo API Rest en una sola solución.
+		</Description>
+    <Company>Banco Davivienda Costa Rica S.A</Company>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <FileVersion>1.1.0</FileVersion>
+    <ApplicationIcon>NM Leitmotiv Superior cono-1.ico</ApplicationIcon>
+    <PackageIcon>NM Leitmotiv Superior cono.png</PackageIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="NM Leitmotiv Superior cono-1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="LicenseAgreement.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="NM Leitmotiv Superior cono.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
